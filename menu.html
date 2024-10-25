@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Menu</title>
+</head>
+<body>
+    <div id="menu-container">
+        <h1>Restaurant Menu</h1>
+        <div id="menu"></div>
+    </div>
+</body>
+</html>
+<style>
+    body {
+    font-family: Arial, sans-serif;
+    background-color: lavender;
+    color: #333;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+#menu-container {
+    max-width: 1000px;
+    margin: auto;
+    padding: 20px;
+    background-color:transparent;
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+}
+
+#menu-container:hover {
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15); /* Subtle hover effect */
+}
+
+h1 {
+    font-size: 2.5em;
+    color: #e94e77;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+}
+
+.menu-item {
+    border-bottom: 1px solid #ddd;
+    padding: 20px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.menu-item:hover {
+    background-color: #f9f9f9;
+    transform: translateY(-5px); /* Elevation effect */
+}
+
+.menu-item:last-child {
+    border-bottom: none;
+}
+
+.item-image {
+    max-width: 150px;
+    max-height: 100px;
+    border-radius: 8px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.item-image:hover {
+    transform: scale(1.1); /* Image zoom effect on hover */
+}
+
+.item-details {
+    flex: 1;
+    text-align: left;
+}
+
+.item-name {
+    font-weight: bold;
+    font-size: 1.4em;
+    color: #333;
+}
+
+.item-description {
+    font-style: italic;
+    color: #666;
+    margin: 10px 0;
+}
+
+.item-price {
+    font-weight: bold;
+    color: #e94e77;
+    font-size: 1.2em;
+}
+
+/* Responsive Design for Mobile */
+@media (max-width: 768px) {
+    .menu-item {
+        flex-direction: column; /* Stack the content vertically */
+        text-align: center;
+    }
+    
+    .item-image {
+        max-width: 100px; /* Smaller images for mobile */
+        max-height: 80px;
+    }
+    
+    .item-details {
+        text-align: center; /* Center details text for mobile */
+    }
+}
+
+</style>
+<script>
+    // Example menu data with images
+const menuItems = [
+    {
+        name: 'CHICKEN BIRIYANI',
+        description: 'Classic chicken biriyani with the traditional touch of the accurate spices',
+        price: '229/-',
+        image: 'images/biriyani.jpeg'
+    },
+    {
+        name: 'PRAWNS BIRIYANI',
+        description: 'Classic prawns biriyani with the traditional touch of the costal spices',
+        price: '229/-',
+        image: 'images/Prawns.jpeg'
+    },
+    
+    {
+        name: 'PANEER BIRIYANI',
+        description: '(VEG) Pure Paneer Biriyani',
+        price: '200/-',
+        image:  'images/paneer.jpeg'
+    },
+    {
+        name: 'STAR FISH BIRIYANI',
+        description: '(NON-VEG) Biriyani with quality fish from the costal region of Andhra',
+        price: '219/-',
+        image: 'images/fish.jpeg'
+    },
+    {
+        name: 'CASHEW BIRIYANI',
+        description: '(VEG) Pure Cashew Biriyani',
+        price: '210/-',
+        image:  'images/cashew.jpeg'
+    },
+    {
+        name: 'CHEF SPL BIRIYANI',
+        description: '(NON-VEG) Biriyani consisting signature secret dish',
+        price: '255/-',
+        image: 'images/secret.jpeg'
+    },
+    {
+        name: 'CHEF SPL BIRIYANI',
+        description: '(VEG) Biriyani consisting signature secret dish',
+        price: '200/-',
+        image: 'images/secret2.jpeg'
+    }
+    
+];
+
+// Function to display menu items
+function displayMenu(menu) {
+    const menuContainer = document.getElementById('menu');
+    menu.forEach(item => {
+        // Create a new div element for each menu item
+        const itemDiv = document.createElement('div');
+        itemDiv.classList.add('menu-item');
+
+        // Add item details to the div
+        itemDiv.innerHTML = `
+            <img src="${item.image}" alt="${item.name}" class="item-image">
+            <div class="item-details">
+                <div class="item-name">${item.name}</div>
+                <div class="item-description">${item.description}</div>
+                <div class="item-price">${item.price}</div>
+            </div>
+        `;
+
+        // Append the item div to the menu container
+        menuContainer.appendChild(itemDiv);
+    });
+}
+
+// Call the function to display the menu
+displayMenu(menuItems);
+
+</script>
+
+
+

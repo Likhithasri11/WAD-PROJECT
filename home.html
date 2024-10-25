@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delicious Delights - Home</title>
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <h1 class="brand-name">Delicious Delights</h1>
+    </header>
+
+    <!-- Navigation -->
+    <nav id="navbar">
+        <img src="https://media.geeksforgeeks.org/wp-content/uploads/20240711123257/jpeg-optimizer_2151336570.jpg"
+            alt="Restaurant Logo" class="nav-logo">
+        <ul class="nav-menu">
+            <li><a href="#">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h2>"Taste the Royalty in Every Bite!"</h2>
+        <p>Order our freshly cooked, mouth-watering biriyanis now!</p>
+        <button class="btn primary">ORDER NOW</button>
+        <button class="btn secondary">VIEW MENU</button>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="about-container">
+            <h2>About</h2>
+            <p>Delicious Delights has been serving authentic and flavorful biriyanis, crafted with traditional recipes and the freshest ingredients. We are passionate about bringing the royal taste of biriyani straight to your table, leaving you with an unforgettable dining experience!</p>
+        </div>
+    </section>
+
+    <!-- Featured Dishes -->
+    <section class="featured">
+        <h2>Our Best Sellers</h2>
+        <div class="product-grid">
+            <div class="product">
+                <img src="images/biriyani.jpeg" alt="Chicken Biriyani">
+                <h3>Chicken Biriyani</h3>
+                <p>Delicious chicken biriyani with fragrant rice and rich spices.</p>
+            </div>
+            <div class="product">
+                <img src="images/fish.jpeg" alt="Fish Biriyani">
+                <h3>Fish Biriyani</h3>
+                <p>Slow-cooked fish in aromatic basmati rice and special masalas.</p>
+            </div>
+            <div class="product">
+                <img src="images/paneer.jpeg" alt="Paneer Biriyani">
+                <h3>Paneer Biriyani</h3>
+                <p>A vegetarian delight with mixed vegetables and the finest paneer.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Special Offers -->
+    <section class="offers">
+        <h2>Special Offers</h2>
+        <div class="offers-grid">
+            <div class="offer">
+                <h3>Family Pack Deal</h3>
+                <p>Get 2 Large Chicken Biriyanis + 1 Veg Biriyani at 20% off.</p>
+            </div>
+            <div class="offer">
+                <h3>Weekend Special</h3>
+                <p>Order Secret Biriyani this weekend and get a free dessert!</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials">
+        <h2>What Our Customers Say</h2>
+        <div class="testimonial-grid">
+            <div class="testimonial">
+                <p>"The best biriyani I’ve ever tasted! Flavors are authentic and rich."</p>
+                <h4>- John Doe</h4>
+            </div>
+            <div class="testimonial">
+                <p>"Perfectly cooked and deliciously spicy. I’ll be ordering again!"</p>
+                <h4>- Jane Smith</h4>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Delicious Delights. All Rights Reserved.</p>
+        <p>Follow us on 
+            <a href="#">Instagram</a> | 
+            <a href="#">Facebook</a> | 
+            <a href="#">Twitter</a>
+        </p>
+    </footer>
+</body>
+
+</html>
+<style>
+    /* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f7f7;
+    color: #333;
+    line-height: 1.6;
+    box-sizing: border-box;
+}
+
+* {
+    box-sizing: inherit;
+}
+
+header {
+    text-align: center;
+    padding: 40px 0;
+    background-color: #ff4e50;
+    color: white;
+}
+
+.brand-name {
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 4rem;
+    font-weight: 700;
+    margin: 0;
+}
+/* Navigation */
+#navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 0;
+    background-color: #30475e;
+    color: white;
+    flex-wrap: wrap;
+}
+
+.nav-logo {
+    height: 60px;
+    border-radius: 50%;
+}
+
+.nav-menu {
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+}
+
+.nav-menu li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    padding: 10px;
+}
+
+.nav-menu li a:hover {
+    background-color: #ff4e50;
+    border-radius: 10px;
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    background-image: url('cantactback.jpg'); /* Replace with your hero image */
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.hero h2 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 1.3rem;
+    margin-bottom: 30px;
+}
+
+.btn {
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    border-radius: 30px;
+    border: none;
+    cursor: pointer;
+    margin: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.btn.primary {
+    background-color: #ff4e50;
+    color: white;
+}
+
+.btn.secondary {
+    background-color: white;
+    color: #ff4e50;
+    border: 2px solid white;
+}
+
+.btn:hover {
+    background-color: #ff7071;
+}
+
+/* About Section */
+.about {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #f7f7f7;
+}
+
+.about h2 {
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+}
+
+.about p {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+/* Featured Dishes */
+.featured {
+    padding: 60px 0;
+    text-align: center;
+    background-color:thistle;
+}
+
+.featured h2 {
+    font-size: 2.2rem;
+    margin-bottom: 40px;
+}
+
+.product-grid {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.product {
+    background-color:thistle;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    text-align: center;
+    width: 280px;
+}
+
+.product img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+/* Special Offers */
+.offers {
+    padding: 60px 0;
+    text-align: center;
+    background-color:thistle;
+}
+
+.offers-grid {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.offer {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    text-align: center;
+}
+
+/* Testimonials */
+.testimonials {
+    padding: 60px 0;
+    background-color: #fff;
+    text-align: center;
+}
+
+.testimonials h2 {
+    font-size: 2.2rem;
+    margin-bottom: 40px;
+}
+
+.testimonial-grid {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.testimonial {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    font-style: italic;
+}
+
+/* Footer */
+footer {
+    background-color: #30475e;
+    color: white;
+    padding: 40px;
+    text-align: center;
+}
+
+footer p {
+    margin: 10px 0;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #navbar {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .nav-menu {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .hero {
+        height: 60vh;
+        padding: 20px;
+    }
+
+    .hero h2 {
+        font-size: 2rem;
+    }
+
+    .product-grid, .offers-grid, .testimonial-grid {
+        flex-direction: column;
+    }
+
+    .product, .offer, .testimonial {
+        width: 100%;
+    }
+}
+
+</style>
